@@ -8,7 +8,7 @@ import SearchStatus from "./searchStatus";
 import UsersTable from "./usersTable";
 import _ from "lodash";
 
-const Users = ({ users: allUsers, ...rest }) => {
+const UsersList = ({ users: allUsers, ...rest }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [professions, setProfessions] = useState();
   const [selectedProf, setSelectedProf] = useState();
@@ -104,8 +104,8 @@ const Users = ({ users: allUsers, ...rest }) => {
   }
   return "loading";
 };
-Users.propTypes = {
-  users: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+UsersList.propTypes = {
+  usersList: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
-export default Users;
+export default UsersList;
